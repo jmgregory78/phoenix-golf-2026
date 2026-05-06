@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix Golf Trip · May 21–24, 2026</title>
+<meta name="description" content="The Boys' Trip 2026 — Phoenix &amp; Scottsdale itinerary for Jason, Joe &amp; James">
+<meta property="og:title" content="Phoenix Golf Trip · May 21–24, 2026">
+<meta property="og:description" content="The Boys' Trip 2026 — Phoenix &amp; Scottsdale itinerary">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #F2EBDB;
+    --ivory: #FAF6ED;
+    --green: #1F3A28;
+    --green-mid: #2D5238;
+    --green-soft: #4A6B4F;
+    --brass: #A88947;
+    --brass-soft: #C9A968;
+    --ink: #1A1F1B;
+    --ink-soft: #4A5048;
+    --line: rgba(31, 58, 40, 0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 16px 20px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    height: 110px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: var(--green) url('https://www.kierlandgolf.com/wp-content/uploads/sites/8910/2026/01/Signature-Resort-Wide.jpg') center/cover;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(31,58,40,0.85), rgba(31,58,40,0.55) 50%, rgba(31,58,40,0.8));
+  }
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--ivory);
+    z-index: 2;
+    text-align: center;
+    padding: 16px;
+  }
+  .hero-eyebrow {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--brass-soft);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: var(--brass-soft);
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--brass-soft);
+    font-weight: 400;
+  }
+  .hero-dates {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: rgba(250,246,237,0.9);
+    margin-top: 2px;
+  }
+
+  /* ---------- TRIP STRIP ---------- */
+  .strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    margin-bottom: 10px;
+  }
+  .strip-cell {
+    padding: 6px 12px;
+    border-right: 1px solid var(--line);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .strip-cell:last-child { border-right: none; }
+  .strip-label {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+  }
+  .strip-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--green);
+  }
+  .strip-value em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+
+  /* ---------- DAYS GRID ---------- */
+  .days {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .day {
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .day-image {
+    position: relative;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--green);
+  }
+  .day-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(31,58,40,0.15) 0%, rgba(31,58,40,0.75) 100%);
+  }
+  .day-image-label {
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+    z-index: 2;
+    color: var(--ivory);
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .day-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--brass-soft);
+  }
+  .day-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .day-date small {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--brass-soft);
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .day-body {
+    padding: 8px 10px;
+    flex: 1;
+  }
+
+  /* ---------- STANDARD EVENT ---------- */
+  .event {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--line);
+    align-items: start;
+  }
+  .event:first-child { padding-top: 1px; }
+  .event:last-child { border-bottom: none; padding-bottom: 0; }
+  .event-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--green);
+    line-height: 1;
+  }
+  .event-time-sub {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .event-title {
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--ink);
+    margin-bottom: 1px;
+    line-height: 1.25;
+  }
+  .event-detail {
+    font-size: 10px;
+    color: var(--ink-soft);
+    line-height: 1.35;
+  }
+  .event-detail .person {
+    font-weight: 600;
+    color: var(--green);
+  }
+
+  /* ---------- TEE TIME EVENT ---------- */
+  .tee {
+    margin: 6px -10px;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(31,58,40,0.04) 0%, rgba(31,58,40,0.07) 100%);
+    border-top: 1px solid rgba(31,58,40,0.12);
+    border-bottom: 1px solid rgba(31,58,40,0.12);
+  }
+  .tee:first-child { margin-top: -2px; border-top: none; }
+  .tee:last-child { margin-bottom: -8px; border-bottom: none; }
+  .tee-banner {
+    background: var(--green);
+    color: var(--brass-soft);
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .tee-flag {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    color: var(--brass-soft);
+  }
+  .tee-time {
+    margin-left: auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--ivory);
+    text-transform: none;
+  }
+  .tee-body {
+    padding: 6px 10px 8px;
+  }
+  .tee-title {
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--green);
+    margin-bottom: 2px;
+    line-height: 1.2;
+    letter-spacing: 0.005em;
+  }
+  .tee-detail {
+    font-size: 10px;
+    color: var(--ink-soft);
+    line-height: 1.35;
+    margin-bottom: 3px;
+  }
+  .tee-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tee-price {
+    display: inline-block;
+    background: var(--brass);
+    color: var(--ivory);
+    padding: 2px 7px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+  }
+  .tee-conf {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--green-soft);
+    text-transform: uppercase;
+  }
+
+  /* day-specific images */
+  .day-thu .day-image { background-image: url('https://www.kierlandgolf.com/wp-content/uploads/sites/8910/2026/01/A7-Tee-to-Green-Good-2.jpg'); }
+  .day-fri .day-image { background-image: url('https://www.kierlandgolf.com/wp-content/uploads/sites/8910/2026/01/I5-Tee-to-Green-with-Native-Good.jpg'); }
+  .day-sat .day-image { background-image: url('https://wmphoenixopen.com/wp-content/uploads/2024_hero_wmpo-1200x600-1-1024x512.jpg'); }
+  .day-sun .day-image { background-image: url('https://www.kierlandgolf.com/wp-content/uploads/sites/8910/2026/01/I9-Behind-Green-with-Water.jpg'); }
+
+  /* ---------- NOTES ---------- */
+  .notes {
+    background: var(--green);
+    color: var(--ivory);
+    padding: 8px 14px;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+  .notes-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--brass-soft);
+    line-height: 1;
+    border-right: 1px solid rgba(201,169,104,0.3);
+    padding-right: 16px;
+    white-space: nowrap;
+  }
+  .notes-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 18px;
+    font-size: 10px;
+    line-height: 1.4;
+    color: rgba(250,246,237,0.92);
+  }
+  .notes-list li {
+    padding-left: 10px;
+    position: relative;
+  }
+  .notes-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--brass-soft);
+    font-size: 6px;
+    top: 5px;
+  }
+  .notes-list strong {
+    color: var(--brass-soft);
+    font-weight: 600;
+  }
+
+  /* ===================================================================== */
+  /* TABLET — 2 columns, slightly larger type */
+  /* ===================================================================== */
+  @media (max-width: 900px) {
+    .days { grid-template-columns: repeat(2, 1fr); }
+    .strip { grid-template-columns: 1fr; }
+    .strip-cell { border-right: none; border-bottom: 1px solid var(--line); padding: 8px 14px; }
+    .strip-cell:last-child { border-bottom: none; }
+    .notes { grid-template-columns: 1fr; gap: 8px; padding: 12px 16px; }
+    .notes-title { border-right: none; padding-right: 0; padding-bottom: 6px; border-bottom: 1px solid rgba(201,169,104,0.3); }
+    .notes-list { grid-template-columns: 1fr; font-size: 11px; }
+  }
+
+  /* ===================================================================== */
+  /* MOBILE — single column, scrollable, more breathing room */
+  /* ===================================================================== */
+  @media (max-width: 640px) {
+    body { font-size: 13px; }
+    .wrap { padding: 14px 14px 24px; }
+
+    .hero { height: 160px; margin-bottom: 12px; }
+    .hero-eyebrow { font-size: 9px; margin-bottom: 6px; }
+    .hero-title { font-size: 44px; }
+    .hero-dates { font-size: 15px; margin-top: 4px; }
+
+    .strip { margin-bottom: 12px; }
+    .strip-cell { padding: 10px 16px; flex-direction: column; gap: 3px; }
+    .strip-label { font-size: 9px; }
+    .strip-value { font-size: 16px; }
+    .strip-value em { font-size: 13px; }
+
+    .days { grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; }
+    .day-image { height: 130px; }
+    .day-image-label { left: 14px; bottom: 10px; gap: 10px; }
+    .day-num { font-size: 30px; }
+    .day-date { font-size: 18px; }
+    .day-date small { font-size: 9px; margin-top: 4px; }
+
+    .day-body { padding: 12px 14px; }
+    .event { grid-template-columns: 64px 1fr; gap: 12px; padding: 8px 0; }
+    .event-time { font-size: 17px; }
+    .event-time-sub { font-size: 9px; margin-top: 3px; }
+    .event-title { font-size: 13px; margin-bottom: 2px; }
+    .event-detail { font-size: 12px; }
+
+    .tee { margin: 8px -14px; }
+    .tee:first-child { margin-top: -4px; }
+    .tee:last-child { margin-bottom: -12px; }
+    .tee-banner { padding: 7px 14px; font-size: 11px; gap: 8px; }
+    .tee-flag { width: 16px; height: 16px; }
+    .tee-time { font-size: 17px; }
+    .tee-body { padding: 10px 14px 12px; }
+    .tee-title { font-size: 15px; margin-bottom: 4px; }
+    .tee-detail { font-size: 12px; margin-bottom: 6px; }
+    .tee-price { font-size: 11px; padding: 3px 9px; }
+    .tee-conf { font-size: 10px; }
+
+    .notes { padding: 14px 16px; }
+    .notes-title { font-size: 18px; padding-bottom: 8px; }
+    .notes-list { font-size: 12px; gap: 6px; }
+    .notes-list li { padding-left: 14px; }
+    .notes-list li::before { font-size: 7px; top: 7px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">The Boys' Trip · 2026</div>
+      <h1 class="hero-title">Phoenix <em>&amp;</em> Scottsdale</h1>
+      <p class="hero-dates">Thursday, May 21 — Sunday, May 24</p>
+    </div>
+  </header>
+
+  <section class="strip">
+    <div class="strip-cell"><span class="strip-label">Group</span><span class="strip-value">Jason · Joe · James</span></div>
+    <div class="strip-cell"><span class="strip-label">Basecamp</span><span class="strip-value">Westin Kierland Resort &amp; Spa</span></div>
+    <div class="strip-cell"><span class="strip-label">Wheels</span><span class="strip-value">Rental Car <em>(Joe arranging)</em></span></div>
+  </section>
+
+  <section class="days">
+
+    <!-- DAY 1: THURSDAY -->
+    <article class="day day-thu">
+      <div class="day-image">
+        <div class="day-image-label">
+          <span class="day-num">01</span>
+          <span class="day-date">Thursday<br>May 21<small>Wheels Down</small></span>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="event">
+          <div class="event-time">9:18<span class="event-time-sub">AM PHX</span></div>
+          <div>
+            <div class="event-title"><span class="person">Joe</span> arrives</div>
+            <div class="event-detail">AA 1282 EWR→PHX · T4</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">10:46<span class="event-time-sub">AM PHX</span></div>
+          <div>
+            <div class="event-title"><span class="person">Jason</span> arrives</div>
+            <div class="event-detail">AS 606 SEA→PHX · 6A</div>
+          </div>
+        </div>
+        <div class="tee">
+          <div class="tee-banner">
+            <svg class="tee-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="22" x2="6" y2="3"/>
+              <path d="M6 3 L18 6 L6 9" fill="currentColor"/>
+              <circle cx="6" cy="22" r="1.5" fill="currentColor"/>
+            </svg>
+            Tee Time
+            <span class="tee-time">1:57 PM</span>
+          </div>
+          <div class="tee-body">
+            <div class="tee-title">Kierland 3</div>
+            <div class="tee-detail">Jason &amp; Joe · 18 holes · cart</div>
+            <div class="tee-meta"><span class="tee-price">$159 pp</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- DAY 2: FRIDAY -->
+    <article class="day day-fri">
+      <div class="day-image">
+        <div class="day-image-label">
+          <span class="day-num">02</span>
+          <span class="day-date">Friday<br>May 22<small>Trio Assembles</small></span>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="tee">
+          <div class="tee-banner">
+            <svg class="tee-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="22" x2="6" y2="3"/>
+              <path d="M6 3 L18 6 L6 9" fill="currentColor"/>
+              <circle cx="6" cy="22" r="1.5" fill="currentColor"/>
+            </svg>
+            Tee Time
+            <span class="tee-time">7:57 AM</span>
+          </div>
+          <div class="tee-body">
+            <div class="tee-title">Kierland 1</div>
+            <div class="tee-detail">Jason &amp; Joe · 18 holes · cart</div>
+            <div class="tee-meta"><span class="tee-price">$219 pp</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">3:45<span class="event-time-sub">PM PHX</span></div>
+          <div>
+            <div class="event-title"><span class="person">James</span> arrives PHX</div>
+            <div class="event-detail">Flight TBD</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">PM<span class="event-time-sub">POOL</span></div>
+          <div>
+            <div class="event-title">Pool &amp; cocktails</div>
+            <div class="event-detail">Evening dinner — TBD</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- DAY 3: SATURDAY -->
+    <article class="day day-sat">
+      <div class="day-image">
+        <div class="day-image-label">
+          <span class="day-num">03</span>
+          <span class="day-date">Saturday<br>May 23<small>The Stadium</small></span>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="tee">
+          <div class="tee-banner">
+            <svg class="tee-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="22" x2="6" y2="3"/>
+              <path d="M6 3 L18 6 L6 9" fill="currentColor"/>
+              <circle cx="6" cy="22" r="1.5" fill="currentColor"/>
+            </svg>
+            Tee Time
+            <span class="tee-time">8:10 AM</span>
+          </div>
+          <div class="tee-body">
+            <div class="tee-title">TPC Scottsdale — Stadium</div>
+            <div class="tee-detail">3 players · res. Jason Gregory</div>
+            <div class="tee-meta">
+              <span class="tee-price">$359 pp + $3 fee</span>
+              <span class="tee-conf">Conf# 649886497</span>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">PM<span class="event-time-sub">POOL</span></div>
+          <div>
+            <div class="event-title">Pool &amp; recovery</div>
+            <div class="event-detail">Evening dinner — TBD</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- DAY 4: SUNDAY -->
+    <article class="day day-sun">
+      <div class="day-image">
+        <div class="day-image-label">
+          <span class="day-num">04</span>
+          <span class="day-date">Sunday<br>May 24<small>Last Round</small></span>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="tee">
+          <div class="tee-banner">
+            <svg class="tee-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="22" x2="6" y2="3"/>
+              <path d="M6 3 L18 6 L6 9" fill="currentColor"/>
+              <circle cx="6" cy="22" r="1.5" fill="currentColor"/>
+            </svg>
+            Tee Time
+            <span class="tee-time">7:57 AM</span>
+          </div>
+          <div class="tee-body">
+            <div class="tee-title">Westin Kierland</div>
+            <div class="tee-detail">3 players · res. Jason Gregory</div>
+            <div class="tee-meta">
+              <span class="tee-price">~$160 pp</span>
+              <span class="tee-conf">Conf# 650512697</span>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">6:16<span class="event-time-sub">PM PHX</span></div>
+          <div>
+            <div class="event-title"><span class="person">Jason &amp; James</span> → SEA</div>
+            <div class="event-detail">AS 1423 · arr 9:29 PM</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">10:19<span class="event-time-sub">PM PHX</span></div>
+          <div>
+            <div class="event-title"><span class="person">Joe</span> → EWR</div>
+            <div class="event-detail">AA 2156 · T4 · arr 6 AM Mon</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <aside class="notes">
+    <div class="notes-title">Worth flagging</div>
+    <ul class="notes-list">
+      <li><strong>Sunday timing</strong> — round wraps ~12:30 PM, ~30 min drive to PHX, plenty of buffer.</li>
+      <li><strong>James's outbound</strong> — slot in once confirmed.</li>
+      <li><strong>Lodging</strong> — all three at Westin Kierland, nights of May 21–23.</li>
+      <li><strong>Trip total green fees</strong> — ~$2,322 across four rounds.</li>
+    </ul>
+  </aside>
+
+</div>
+
+</body>
+</html>
